@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 3D Transforms and Transitions</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #121212;
+      font-family: system-ui, sans-serif;
+      
+      perspective: 800px;
+    }
+
+    .card-3d {
+      width: 220px;
+      height: 220px;
+      background: linear-gradient(135deg, #ff6b6b, #5f27cd);
+      color: white;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+
+      
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+    }
+
+    .card-3d:hover {
+      
+      transform: rotateY(25deg) rotateX(15deg) translateZ(40px);
+      box-shadow: 0 24px 40px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-3d">
+    <h3>3D Magic</h3>
+    <p>Hover to tilt and pop out in 3D space.</p>
+  </div>
+
+</body>
+</html>
